@@ -27,10 +27,16 @@ class ChatMessageWidget extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 16.0),
                   child: CircleAvatar(
                     backgroundColor: const Color.fromRGBO(16, 163, 127, 1),
-                    child: Image.asset(
-                      'assets/bot.png',
-                      color: Colors.white,
-                      scale: 1.5,
+                    child:  Container(
+                      height: MediaQuery.of(context).size.height/12,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(120)),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      child: Image.asset(
+                        "assets/images/Screenshot 2024-04-26 042858.png",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 )

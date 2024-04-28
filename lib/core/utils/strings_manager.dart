@@ -1,7 +1,7 @@
 class AppStrings {
   static const noRouteFound = "noRouteFound";
-  static const imageGeneration = "Image Generation - OpenAI";
-  static const textCompletion  = "Text Completion - OpenAI";
+  static const imageGeneration = "Get Images ! ";
+  static const textCompletion  = "Get Answers";
   // error handler
   static const String success = "success";
   static const String badRequestError = "bad_request_error";

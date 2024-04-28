@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
     _animation = Tween<double>(begin: 0, end: 1).animate(_controller)
       ..addStatusListener((status) {
@@ -41,23 +41,36 @@ class _SplashScreenState extends State<SplashScreen>
     super.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: AnimatedBuilder(
-        animation: _animation,
-        builder: (context, child) {
-          return Center(
-            child: Transform.rotate(
-              angle: _animation.value * 2 * 3.14,
-              child: Image.asset(
-                ImageAssets.openAiAvatar,
-                fit: BoxFit.contain,
-              ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment:MainAxisAlignment.center,
+          children: [
+            AnimatedBuilder(
+              animation: _animation,
+              builder: (context, child) {
+                return Transform.rotate(
+                  angle: _animation.value * 2 * 3.14,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                        borderRadius: BorderRadius.circular(120)),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.asset(
+                      "assets/images/Screenshot 2024-04-26 042858.png",
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                );
+              },
             ),
-          );
-        },
+
+          ],
+        ),
       ),
     );
   }

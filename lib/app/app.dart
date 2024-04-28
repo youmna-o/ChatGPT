@@ -25,11 +25,16 @@ class _MyAppState extends State<MyApp> {
             create: (_) => instance<TextCompletionCubit>(),
           ),
         ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(brightness: Brightness.dark),
-          onGenerateRoute: RouteGenerator.getRoute,
-          initialRoute: Routes.splashRoute,
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: Color(0xff00BAB4))
+          ),
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(brightness: Brightness.dark),
+            onGenerateRoute: RouteGenerator.getRoute,
+            initialRoute: Routes.splashRoute,
+          ),
         ));
   }
 }

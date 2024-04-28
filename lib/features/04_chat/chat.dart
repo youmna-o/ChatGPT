@@ -37,19 +37,21 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+
         toolbarHeight: 100,
         title: const Padding(
           padding: EdgeInsets.all(8.0),
           child: Text(
-            'Flutter ChatGPT API ',
+            'Your Wanas ',
             maxLines: 2,
             textAlign: TextAlign.center,
           ),
         ),
-        backgroundColor: botBackgroundColor,
+        backgroundColor: Colors.black,
       ),
-      backgroundColor: backgroundColor,
+
       body: SafeArea(
         child: Column(
           children: [

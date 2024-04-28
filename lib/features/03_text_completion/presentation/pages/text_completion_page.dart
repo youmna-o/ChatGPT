@@ -36,7 +36,8 @@ class _TextCompletionPageState extends State<TextCompletionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      backgroundColor: Colors.black,
+      appBar: AppBar(backgroundColor: Colors.black,
         title: Text(AppStrings.textCompletion.split("-")[0]),
       ),
       body: Center(

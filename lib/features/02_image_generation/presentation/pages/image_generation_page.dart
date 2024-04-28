@@ -35,11 +35,13 @@ class _ImageGenerationPageState extends State<ImageGenerationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      backgroundColor: Colors.black,
+      appBar: AppBar(  backgroundColor: Colors.black,
         title: Text(AppStrings.imageGeneration.split("-")[0]),
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
                 child: BlocBuilder<ImageGenerationCubit, ImageGenerationState>(

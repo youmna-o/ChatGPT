@@ -21,7 +21,8 @@ class HomeButtonWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         decoration: BoxDecoration(
           color: Constants.darkColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(color: Color(0xff00BAB4)),
           boxShadow: Constants.glowBoxShadow,
         ),
         child: Row(
@@ -29,6 +30,7 @@ class HomeButtonWidget extends StatelessWidget {
             Icon(
               iconData,
               size: 40,
+              //color: Color(0xff00BAB4),
             ),
             const SizedBox(
               width: 10,
